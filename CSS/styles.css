@@ -1,0 +1,57 @@
+/* ---  STYLES CSS  --- 
+  ****
+  ****
+______________________________*/
+
+/* 
+  //
+  ***  VARIABLES  ***
+  __________
+*/
+:root {
+  /* colors */
+  /* font & typography */
+}
+
+
+
+/* 
+  //
+  ***  RESET  ***
+  __________
+*/
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+a, button {
+  all: unset;
+  cursor: pointer;
+}
+
+li {list-style: none;}
+
+
+/* 
+  //
+  ***  REUSABLE CLASSES  ***
+  __________
+*/
+
+
+
+
+/* 
+  //
+  ***  HEADER  ***
+  __________
+*/
