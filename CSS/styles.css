@@ -10,7 +10,18 @@ ______________________________*/
 */
 :root {
   /* colors */
+  --black:    #1a1c18;
+  --black-50: #1a1c1899;
+  --green:    #3c4433;
+  --white:    #fff;
+  --beige:    #f2f2ef;
+  --white-50: #ffffff99;
+  --d_beige:  #e8e8e1;
+
   /* font & typography */
+  --inter: 'Inter', sans-serif;
+  --geist: 'Geist', sans-serif;
+  --sentient: 'Sentient', serif;
 }
 
 
@@ -29,9 +40,13 @@ ______________________________*/
 }
 
 html {
+  font-family: var(--geist);
   font-size: 10px;
+  color: var(--black);
   scroll-behavior: smooth;
 }
+
+body {background-color: var(--beige);}
 
 a, button {
   all: unset;
@@ -46,12 +61,274 @@ li {list-style: none;}
   ***  REUSABLE CLASSES  ***
   __________
 */
-
+.d-n {display: none;}
 
 
 
 /* 
   //
   ***  HEADER  ***
+  __________
+*/
+.nav-menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 16px;
+  position: relative;
+  background-color: var(--white);
+}
+
+.logo {
+  font-family: var(--inter);
+  font-size: 2.2rem;
+  font-weight: 700;
+  line-height: 2.2rem;
+  letter-spacing: -.01rem;
+  text-transform: uppercase;
+}
+
+.nav-list {
+  position: absolute;
+  top: 72px;
+  left: 0;
+  padding: 24px 16px 48px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background-color: var(--white);
+  border-bottom: 1px solid var(--d_beige);
+  transition: .25s ease;
+}
+
+
+
+
+.nav-link a {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+  letter-spacing: -.1rem;
+  font-weight: 500;
+  transition: .25s ease;
+}
+
+.nav-link:not(.nav-link:nth-of-type(1)) {
+  height: 32px;
+  overflow: hidden;
+}
+
+.shop-drop-btn {
+  height: 32px;
+  overflow: hidden;
+  width: 100%;
+  transition: .25s ease;
+}
+
+.sub-menu-dropdown .nav-action {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  transition: .25s ease;
+}
+
+.shop-drop-btn >div div {
+  font-size: 2.3rem;
+  line-height: 3.2rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0;
+  width: 100%;
+}
+
+.shop-drop-btn svg {
+  transition: .25s ease;
+}
+
+
+
+.sub-menu {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  transition: .25s ease;
+}
+
+.sub-menu li a {
+  font-size: 1.8rem;
+}
+
+
+/* hide nav-list */
+.hide-nav-list {
+  height: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+
+
+/* close sub-menu */
+.hide-sub-menu .sub-menu {
+  height: 0;
+  padding: 0 12px;
+  overflow: hidden;
+}
+
+.hide-sub-menu button svg {
+  transform: rotate(180deg);
+  transition: .25s ease;
+}
+
+
+
+
+
+.user-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.user-item {
+  height: 20px;
+  overflow: hidden;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 500;
+}
+
+
+.user-item a,
+.user-item button {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  transition: .25s ease;
+}
+
+.cart >div {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+/* .user-item:hover .user-action {transform: translateY(-20px);} */
+
+
+.menu-btn {
+  height: 32px;
+  width: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  position: relative;
+}
+
+.menu-btn .line {
+  height: 2px;
+  width: 20px;
+  background-color: var(--black);
+  transition: .25s ease;
+}
+
+/* close menu actions */
+.close-menu .line {position: absolute;} 
+.close-menu .one {transform: rotate(45deg)}
+.close-menu .two {transform: rotate(-45deg)}
+
+
+@media screen and (min-width: 810px) {
+  .menu-btn {display: none;}
+  .nav-menu {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 25px 32px;
+  }
+
+  .sub-menu {
+    position: absolute;
+    top: 72px;
+    left: 0;
+    width: 100%;
+    padding: 16px 32px;
+    background-color: var(--white);
+    border-bottom: 1px solid var(--d_beige);
+  }
+
+  .sub-menu li a {font-size: 1.5rem;}
+
+
+  .nav-list {
+    padding: 0;
+    border-bottom: none;
+    position: static;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+    height: fit-content;
+    width: fit-content;
+  }
+  
+  .nav-list li:not(.nav-link:nth-of-type(1)) {
+    height: 20px;
+    overflow: hidden;
+  }
+
+  .nav-list a {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    letter-spacing: 0;
+  }
+
+  .sub-menu-dropdown button svg {width: 18px;}
+  
+  .nav-link:not(:first-child):hover .nav-action {transform: translateY(-20px);}
+
+  .shop-drop-btn {
+    height: 2rem;
+    display: flex;
+    align-items: start;
+    gap: 6px;
+  }
+  
+  .shop-drop-btn >div div {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    letter-spacing: 0;
+  }
+
+
+
+
+  .logo {
+    display: grid;
+    place-items: center;
+  }
+
+  .user-controls {
+    justify-content: end;
+  }
+
+
+  .shop-drop-btn:hover .nav-action {transform: translateY(-20px);}
+  .user-item:hover .user-action {transform: translateY(-20px);}
+}
+
+
+
+
+
+/* 
+  //
+  ***  FOOTER  ***
   __________
 */
