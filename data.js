@@ -1,4 +1,4 @@
-const productList = [
+export const productList = [
   // Cleanser
   {
     id: "0000-1111-qwer",
@@ -494,7 +494,7 @@ const productList = [
 
 
 // product categories
-const categoryList = [
+export const categoryList = [
   {
     id: "01",
     title: "Cleansers",
@@ -515,7 +515,7 @@ const categoryList = [
 
 
 // slider data
-const sliderData = [
+export const sliderData = [
   {
     heading: "Natural Skincare",
     parag: "Start your day with gentle care and nourishing ingredients designed to awaken your skin naturally.",
