@@ -70,6 +70,13 @@ li {list-style: none;}
   ***  HEADER  ***
   __________
 */
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9999999999;
+}
+
 .nav-menu {
   display: flex;
   align-items: center;

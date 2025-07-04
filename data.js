@@ -496,17 +496,17 @@ export const productList = [
 // product categories
 export const categoryList = [
   {
-    id: "01",
+    id: "Cleansers",
     title: "Cleansers",
     descr: "Gently remove dirt and impurities without stripping your skin. Perfect for a fresh, clean start every day.",
     bgImg: "https://framerusercontent.com/images/OeSSeFyLrylStREidBRAkvQlU.webp?scale-down-to=2048"
   },  {
-    id: "02",
+    id: "Lotions",
     title: "Lotions",
     descr: "Lightweight and nourishing, our lotions hydrate and soften your skin while absorbing quickly for a smooth finish.",
     bgImg: "https://framerusercontent.com/images/v5Gu7B5jNs24KJinLGjATatnVKg.webp?scale-down-to=2048"
   },  {
-    id: "03",
+    id: "Moisturizers",
     title: "Moisturizers",
     descr: "Rich in nutrients and moisture, our moisturizers help restore skin balance and keep your complexion soft and healthy.",
     bgImg: "https://framerusercontent.com/images/CRZizwSao5Kdnh1wYc5xQUSbNE.webp?scale-down-to=2048"
