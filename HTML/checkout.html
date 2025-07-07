@@ -9,8 +9,8 @@
   <meta name="keywords" content="">
   <meta http-equiv="X-UA-Compatible" content="IE=7">
 
-  <title></title>
-  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <title>©Basalt - </title>
+  <link rel="shortcut icon" href="https://framerusercontent.com/images/F9ICFixq633CVznDzGLdYrj7p4.jpg" type="image/x-icon">
 
   <!-- 
     **
@@ -22,9 +22,15 @@
 
   <!-- 
     **
-    **  FONTSHARE FONTS
+    **  FONTSHARE - GOOGLE FONTS  **
     **
   -->
+  <link href="https://api.fontshare.com/v2/css?f[]=sentient@200,201,300,301,400,401,500,501&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
 
 </head>
 
@@ -34,7 +40,84 @@
     ***
     ***  HEADER  ***
   -->
-  <header class="header"></header>
+  <header class="header">
+
+    <nav class="nav-menu">
+      <ul class="nav-list hide-nav-list">
+        <li class="sub-menu-dropdown nav-link hide-sub-menu">
+          <button class="shop-drop-btn">
+            <div class="nav-action">
+              <div>
+                Shop
+                <svg width="22" height="" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18 15L12 9L6 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div>
+                Shop
+                <svg width="22" height="" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18 15L12 9L6 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+            </div>
+          </button>
+
+          <!-- sub menu -->
+          <ul class="sub-menu">
+            <li><a href="shop.html">All Products</a></li>
+            <li><a href="">Cleansers</a></li>
+            <li><a href="">Lotions</a></li>
+            <li><a href="">Moisturizers</a></li>
+          </ul>
+        </li>
+        
+        <li class="nav-link"><a href="./about.html" class="nav-action">
+          <span>About</span>
+          <span>About</span>
+        </a></li>
+        <li class="nav-link"><a href="./about.html" class="nav-action">
+          <span>Articles</span>
+          <span>Articles</span>
+        </a></li>
+        <li class="nav-link"><a href="./contact.html" class="nav-action">
+          <span>Contact</span>
+          <span>Contact</span>
+        </a></li>
+      </ul>
+
+      <a href="./home.html" class="logo">©Basalt</a>
+
+      <ul class="user-controls">
+        <!-- <li class="user-item">
+          <a href="./account.html" class="user-action">
+            <span>Account</span>
+            <span>Account</span>
+          </a>
+        </li> -->
+
+        <li class="user-item">
+          <button class="user-action">
+            <span>Search</span>
+            <span>Search</span>
+          </button>
+        </li>
+
+        <li class="user-item">
+          <a href="./checkout.html" class="cart user-action">
+            <div>cart(<span class="cart-total-quantity">0</span>)</div>
+            <div>cart(<span class="cart-total-quantity">0</span>)</div>
+          </a>
+        </li>
+
+        <li>
+          <button class="menu-btn">
+            <div class="line one"></div>
+            <div class="line two"></div>
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </header>
 
 
 
@@ -42,7 +125,148 @@
     ***
     ***  MAIN  ***
   -->
-  <main class="main"></main>
+  <main class="main">
+
+    <div class="cart-intro">
+      <h1>Your Cart</h1>
+      <p>Make changes to your cart before checkout.</p>
+    </div>
+
+    <div class="cart-container">
+
+      <div class="cart-items">
+
+        <div class="table-head">
+          <div>Product</div>
+          <div></div>
+          <div>Size</div>
+          <div>Quantity</div>
+          <div>Total Price</div>
+        </div>
+
+        <ul class="cart-items-list">
+
+          <!-- cart item mobile -->
+          <li class="cart-item-card">
+            <div class="product-img">
+              <img src="https://cdn.shopify.com/s/files/1/0898/2403/5082/files/product-01.webp?v=1747821340" alt="" loading="lazy">
+            </div>
+
+            <div class="product-info">
+              <div>
+                <div class="name-size">
+                  <h3 class="pdt-name">Gentle Wash</h3>
+                  <h5>Size: <span>50ml</span></h5>
+                </div>
+
+                <div class="price">7,90 €</div>
+              </div>
+
+              <div class="quantity-remove">
+                <div>
+                  <button class="decrement">
+                    <svg width="16" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </button>
+                  <div class="quantity">0</div>
+                  <button class="increment">
+                    <svg width="16" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </button>
+                </div>
+
+                <div class="remove-btn-container">
+                  <button class="remove-item">
+                    <span>Remove</span>
+                    <span>Remove</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <!-- cart item desktop -->
+          <li class="desktop-cart-item-card">
+
+            <div class="product">
+              <div class="product-img">
+              <img src="https://cdn.shopify.com/s/files/1/0898/2403/5082/files/product-01.webp?v=1747821340" alt="" loading="lazy">
+              </div>
+
+              <div class="name-price">
+                <h3 class="pdt-name">Gentle Wash</h3>
+                <h3 class="pdt-price">$7.90</h3>
+              </div>
+            </div>
+
+            <div></div>
+
+            <div class="size">100ml</div>
+
+            <div class="pdt-quantity">
+              <button class="decrement">
+                <svg width="16" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+              <div class="quantity">0</div>
+              <button class="increment">
+                <svg width="16" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+            </div>
+
+            <div class="total-price">$00.00</div>
+
+            <div class="remove-btn-container">
+              <button class="remove-item">
+                <span>Remove</span>
+                <span>Remove</span>
+              </button>
+            </div>
+          </li>
+
+        </ul>
+      </div>
+
+
+      <div class="cart-checkout">
+        <div>Checkout details</div>
+
+        <div class="details">
+          <div class="items">
+            <div>Items (<span>0</span>):</div>
+            <div class="amout">$0.00</div>
+          </div>
+
+          <div class="shipping">
+            <div>Shipping & handling:</div>
+            <div>$0.00</div>
+          </div>
+
+          <div class="total-before-tax">
+            <div>Total before tax:</div>
+            <div>$0.00</div>
+          </div>
+
+          <div class="tax">
+            <div>Estimated tax (10%):</div>
+            <div>$0.00</div>
+          </div>
+
+          <div class="cart-total">
+            <div>Order total:</div>
+            <div>$0.00</div>
+          </div>
+
+          <button>Check out</button>
+        </div>
+      </div>
+    </div>
+  </main>
 
 
 
@@ -51,7 +275,162 @@
     ***
     ***  FOOTER  ***
   -->
-  <footer class="footer"></footer>
+  <footer class="footer">
+
+    <div class="about-brand">
+
+      <div>
+        <h4>About Basalt</h4>
+        <p>Combining nature and science, we create skincare that nurtures your skin and respects the planet. Healthy, radiant skin starts here.</p>
+      </div>
+
+      <div>
+        <ul class="social">
+          <li><a href="">
+            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 32 32">
+            <path d="M 16 4 C 9.3844276 4 4 9.3844276 4 16 C 4 22.615572 9.3844276 28 16 28 C 22.615572 28 28 22.615572 28 16 C 28 9.3844276 22.615572 4 16 4 z M 16 6 C 21.534692 6 26 10.465308 26 16 C 26 21.027386 22.311682 25.161277 17.488281 25.878906 L 17.488281 18.916016 L 20.335938 18.916016 L 20.783203 16.023438 L 17.488281 16.023438 L 17.488281 14.443359 C 17.488281 13.242359 17.882859 12.175781 19.005859 12.175781 L 20.810547 12.175781 L 20.810547 9.6523438 C 20.493547 9.6093438 19.822688 9.515625 18.554688 9.515625 C 15.906688 9.515625 14.355469 10.913609 14.355469 14.099609 L 14.355469 16.023438 L 11.632812 16.023438 L 11.632812 18.916016 L 14.355469 18.916016 L 14.355469 25.853516 C 9.6088556 25.070647 6 20.973047 6 16 C 6 10.465308 10.465308 6 16 6 z"></path>
+            </svg>
+          </a></li>
+
+          <li><a href="">
+            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 32 32">
+<path d="M 11.46875 5 C 7.917969 5 5 7.914063 5 11.46875 L 5 20.53125 C 5 24.082031 7.914063 27 11.46875 27 L 20.53125 27 C 24.082031 27 27 24.085938 27 20.53125 L 27 11.46875 C 27 7.917969 24.085938 5 20.53125 5 Z M 11.46875 7 L 20.53125 7 C 23.003906 7 25 8.996094 25 11.46875 L 25 20.53125 C 25 23.003906 23.003906 25 20.53125 25 L 11.46875 25 C 8.996094 25 7 23.003906 7 20.53125 L 7 11.46875 C 7 8.996094 8.996094 7 11.46875 7 Z M 21.90625 9.1875 C 21.402344 9.1875 21 9.589844 21 10.09375 C 21 10.597656 21.402344 11 21.90625 11 C 22.410156 11 22.8125 10.597656 22.8125 10.09375 C 22.8125 9.589844 22.410156 9.1875 21.90625 9.1875 Z M 16 10 C 12.699219 10 10 12.699219 10 16 C 10 19.300781 12.699219 22 16 22 C 19.300781 22 22 19.300781 22 16 C 22 12.699219 19.300781 10 16 10 Z M 16 12 C 18.222656 12 20 13.777344 20 16 C 20 18.222656 18.222656 20 16 20 C 13.777344 20 12 18.222656 12 16 C 12 13.777344 13.777344 12 16 12 Z"></path>
+</svg>
+          </a></li>
+          <li><a href="">
+            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 32 32">
+<path d="M 16 6 C 12.234375 6 8.90625 6.390625 6.875 6.6875 C 5.195313 6.933594 3.839844 8.199219 3.53125 9.875 C 3.269531 11.300781 3 13.386719 3 16 C 3 18.613281 3.269531 20.699219 3.53125 22.125 C 3.839844 23.800781 5.195313 25.070313 6.875 25.3125 C 8.914063 25.609375 12.253906 26 16 26 C 19.746094 26 23.085938 25.609375 25.125 25.3125 C 26.804688 25.070313 28.160156 23.800781 28.46875 22.125 C 28.730469 20.695313 29 18.605469 29 16 C 29 13.394531 28.734375 11.304688 28.46875 9.875 C 28.160156 8.199219 26.804688 6.933594 25.125 6.6875 C 23.09375 6.390625 19.765625 6 16 6 Z M 16 8 C 19.632813 8 22.878906 8.371094 24.84375 8.65625 C 25.6875 8.78125 26.347656 9.417969 26.5 10.25 C 26.742188 11.570313 27 13.527344 27 16 C 27 18.46875 26.742188 20.429688 26.5 21.75 C 26.347656 22.582031 25.691406 23.222656 24.84375 23.34375 C 22.871094 23.628906 19.609375 24 16 24 C 12.390625 24 9.125 23.628906 7.15625 23.34375 C 6.3125 23.222656 5.652344 22.582031 5.5 21.75 C 5.257813 20.429688 5 18.476563 5 16 C 5 13.519531 5.257813 11.570313 5.5 10.25 C 5.652344 9.417969 6.308594 8.78125 7.15625 8.65625 C 9.117188 8.371094 12.367188 8 16 8 Z M 13 10.28125 L 13 21.71875 L 14.5 20.875 L 21.5 16.875 L 23 16 L 21.5 15.125 L 14.5 11.125 Z M 15 13.71875 L 18.96875 16 L 15 18.28125 Z"></path>
+</svg>
+          </a></li>
+          <li><a href="">
+            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 32 32">
+<path d="M 9.6113281 5 C 7.0767063 5 5 7.0767063 5 9.6113281 L 5 22.388672 C 5 24.923294 7.0767063 27 9.6113281 27 L 22.388672 27 C 24.923294 27 27 24.923294 27 22.388672 L 27 9.6113281 C 27 7.0767063 24.923294 5 22.388672 5 L 9.6113281 5 z M 9.6113281 7 L 22.388672 7 C 23.84205 7 25 8.15795 25 9.6113281 L 25 22.388672 C 25 23.84205 23.84205 25 22.388672 25 L 9.6113281 25 C 8.15795 25 7 23.84205 7 22.388672 L 7 9.6113281 C 7 8.15795 8.15795 7 9.6113281 7 z M 17 9 L 17 19 C 17 20.116666 16.116666 21 15 21 C 13.883334 21 13 20.116666 13 19 C 13 17.883334 13.883334 17 15 17 L 15 15 C 12.802666 15 11 16.802666 11 19 C 11 21.197334 12.802666 23 15 23 C 17.197334 23 19 21.197334 19 19 L 19 12.888672 C 19.827834 13.529766 20.809277 13.98411 21.927734 14 L 21.957031 12 C 20.310764 11.976611 19 10.654231 19 9 L 17 9 z"></path>
+</svg>
+          </a></li>
+          <li><a href="">
+            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 32 32">
+<path d="M 4.0175781 4 L 13.091797 17.609375 L 4.3359375 28 L 6.9511719 28 L 14.246094 19.34375 L 20.017578 28 L 20.552734 28 L 28.015625 28 L 18.712891 14.042969 L 27.175781 4 L 24.560547 4 L 17.558594 12.310547 L 12.017578 4 L 4.0175781 4 z M 7.7558594 6 L 10.947266 6 L 24.279297 26 L 21.087891 26 L 7.7558594 6 z"></path>
+</svg>
+          </a></li>
+        </ul>
+
+        <ul class="payement">
+          <li><a href="">
+            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 50 50">
+                <path d="M 9.984375 15.001953 C 9.149375 15.041953 8.1182969 15.573313 7.5292969 16.320312 C 6.9892969 16.964312 6.5275313 18.010188 6.6445312 18.992188 C 7.5875313 19.074188 8.5301406 18.500438 9.1191406 17.773438 C 9.6991406 17.026437 10.082375 16.024953 9.984375 15.001953 z M 18 17 L 18 32 L 20.375 32 L 20.375 27 L 23.625 27 C 26.608 27 28.75 24.925 28.75 22 C 28.75 19.075 26.647125 17 23.703125 17 L 18 17 z M 20.375 19 L 23.125 19 C 25.172 19 26.375 20.105 26.375 22 C 26.375 23.895 25.182 25 23.125 25 L 20.375 25 L 20.375 19 z M 9.875 19.5 C 8.5 19.5 7.517 20.25 6.875 20.25 C 6.223 20.25 5.25 19.509766 4.125 19.509766 C 2.75 19.509766 1.4033594 20.372859 0.69335938 21.630859 C -0.76564063 24.145859 0.31460937 27.869016 1.7246094 29.916016 C 2.4156094 30.930016 3.25 32 4.375 32 C 5.406 31.961 5.755 31.375 7 31.375 C 8.254 31.375 8.625 32 9.75 32 C 10.875 32 11.556094 30.969078 12.246094 29.955078 C 13.034094 28.805078 13.356 27.684 13.375 27.625 C 13.356 27.606 11.197734 26.77725 11.177734 24.28125 C 11.158734 22.19525 12.879031 21.200578 12.957031 21.142578 C 11.984031 19.700578 10.375 19.5 10 19.5 L 9.875 19.5 z M 34.199219 21 C 31.710219 21 29.870734 22.395453 29.802734 24.314453 L 31.912109 24.314453 C 32.086109 23.402453 32.948859 22.804688 34.130859 22.804688 C 35.563859 22.804688 36.373047 23.460969 36.373047 24.667969 L 36.375 25.5 L 33.443359 25.654297 C 30.722359 25.815297 29.25 26.908594 29.25 28.808594 C 29.25 30.727594 30.770219 32.001953 32.949219 32.001953 C 34.421219 32.001953 35.78725 31.270328 36.40625 30.111328 L 36.455078 30.111328 L 36.455078 31.886719 L 38.623047 31.886719 L 38.623047 24.515625 C 38.624047 22.376625 36.882219 21 34.199219 21 z M 39.5 21 L 43.507812 31.949219 L 43.292969 32.615234 C 42.930969 33.744234 42.344828 34.177734 41.298828 34.177734 C 41.119828 34.177734 40.781 34.159625 40.625 34.140625 L 40.625 35.945312 C 40.783 35.980313 41.332906 36 41.503906 36 C 43.810906 36 44.896703 35.132047 45.845703 32.498047 L 50 21 L 47.595703 21 L 44.808594 29.884766 L 44.759766 29.884766 L 41.972656 21 L 39.5 21 z M 36.375 27 L 36.367188 27.867188 C 36.367188 29.254188 35.166125 30.242188 33.578125 30.242188 C 32.329125 30.242188 31.535156 29.653953 31.535156 28.751953 C 31.535156 27.820953 32.300672 27.279359 33.763672 27.193359 L 36.375 27 z"></path>
+            </svg>
+          </a></li>
+          <li><a href="">
+            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 24 24">
+              <path d="M8.994 12.242H4.863v1.502h2.002c-.165.345-.402.646-.691.89l.001.001-.002 0c-.457.382-1.044.611-1.686.611-1.114 0-2.065-.692-2.448-1.67-.117-.298-.181-.621-.181-.959 0-.545.166-1.05.449-1.47l.049-.065c.476-.664 1.251-1.094 2.13-1.094.702 0 1.341.274 1.81.725l1.254-1.401C6.748 8.569 5.67 8.111 4.487 8.111c-1.555 0-2.926.789-3.737 1.987-.486.72-.77 1.587-.77 2.52 0 .74.178 1.438.494 2.054.747 1.456 2.263 2.453 4.012 2.453 1.201 0 2.292-.469 3.1-1.235l-.001-.001c.867-.818 1.408-1.983 1.408-3.27V12.242zM21.045 15.353l-1.773-4.658h1.077l1.211 3.545 1.485-3.545h.935c0 0-2.9 6.842-2.924 6.899l-.935.024C20.138 17.579 21.045 15.353 21.045 15.353zM18.012 13.552c0 .577-.508.988-1.18.988-.528 0-.865-.245-.865-.62 0-.387.324-.612.943-.648l1.105-.081L18.012 13.552zM17.095 10.695c-1.053 0-1.832.581-1.861 1.379h.894c.074-.38.438-.628.938-.628.606 0 .949.272.949.775l0 .347-1.24.064c-1.151.067-1.775.522-1.775 1.312 0 .798.643 1.328 1.565 1.328.623 0 1.201-.304 1.463-.786h.02l.003.786h.915v-3.114C18.967 11.268 18.229 10.695 17.095 10.695zM12.56 12.22h-1.221V9.78h1.221c.871 0 1.43.411 1.43 1.221S13.435 12.22 12.56 12.22zM12.852 8.865h-2.428v6.407h.915v-2.136h1.479C14.088 13.136 15 12.25 15 11S14.105 8.865 12.852 8.865z"></path>
+            </svg>
+          </a></li>
+          <li><a href="">
+            <?xml version="1.0"?><svg enable-background="new -822 823.1 56.7 56.7" height="56.7px" id="Layer_1" version="1.1" viewBox="-822 823.1 56.7 56.7" width="56.7px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><polygon points="-797.8,845.3 -801.1,860.5 -797.1,860.5 -793.9,845.3  "/><path d="M-803.6,845.3l-4.1,10.3l-1.7-8.8c-0.2-1-1-1.5-1.8-1.5h-6.7l-0.1,0.4c1.4,0.3,2.9,0.8,3.9,1.3c0.6,0.3,0.7,0.6,0.9,1.3   l3.1,12.1h4.2l6.4-15.2H-803.6z"/><path d="M-772.5,845.3h-3.4c-0.8,0-1.4,0.4-1.7,1.1l-5.9,14.1h4.1l0.8-2.3h5l0.5,2.3h3.6L-772.5,845.3z M-777.3,855.1l2.1-5.7   l1.2,5.7H-777.3z"/><path d="M-788.7,849.5c0-0.5,0.5-1.1,1.7-1.3c0.6-0.1,2.1-0.1,3.9,0.7l0.7-3.2c-0.9-0.3-2.2-0.7-3.7-0.7c-3.9,0-6.6,2.1-6.6,5   c0,2.2,2,3.4,3.4,4.1c1.5,0.7,2,1.2,2,1.9c0,1-1.2,1.5-2.4,1.5c-2,0-3.1-0.5-4-1l-0.7,3.3c0.9,0.4,2.6,0.8,4.4,0.8   c4.1,0,6.8-2,6.8-5.2C-783.2,851.6-788.8,851.3-788.7,849.5z"/></g></svg>
+          </a></li>
+
+        </ul>
+      </div>
+
+      <div>© Made by <a href="">Hamza ait lachguer</a></div>
+
+    </div>
+
+    <div class="footer-nav">
+
+      <ul class="footer-nav-list">
+
+        <li>
+          <h4>Pages</h4>
+          <ul>
+            <li><a href="./home.html" class="footer-nav-link">
+              <span>Home</span>
+              <span>Home</span>
+            </a></li>
+
+            <li><a href="./about.html" class="footer-nav-link">
+              <span>About</span>
+              <span>About</span>
+            </a></li>
+
+            <li><a href="./shop.html" class="footer-nav-link">
+              <span>Shop</span>
+              <span>Shop</span>
+            </a></li>
+
+            <li><a href="./.html" class="footer-nav-link">
+              <span>Articles</span>
+              <span>Articles</span>
+            </a></li>
+          </ul>
+        </li>
+
+        <li>
+          <h4>Categories</h4>
+          <ul>
+            <li><a href="./shop.html" class="footer-nav-link">
+              <span>All Products</span>
+              <span>All Products</span>
+            </a></li>
+
+            <li><a href="./.html" class="footer-nav-link">
+              <span>Cleansers</span>
+              <span>Cleansers</span>
+            </a></li>
+
+            <li><a href="./.html" class="footer-nav-link">
+              <span>Lotions</span>
+              <span>Lotions</span>
+            </a></li>
+
+            <li><a href="./.html" class="footer-nav-link">
+              <span>Moisturizers</span>
+              <span>Moisturizers</span>
+            </a></li>
+          </ul>
+        </li>
+
+        <li>
+          <h4>Support</h4>
+          <ul>
+            <li><a href="./contact.html" class="footer-nav-link">
+              <span>Contact</span>
+              <span>Contact</span>
+            </a></li>
+
+            <li><a href="./.html" class="footer-nav-link">
+              <span>Cleansers</span>
+              <span>Cleansers</span>
+            </a></li>
+
+            <li><a href="./.html" class="footer-nav-link">
+              <span>FAQ's</span>
+              <span>FAQ's</span>
+            </a></li>
+
+            <li><a href="./.html" class="footer-nav-link">
+              <span>Shipping & Delivery</span>
+              <span>Shipping & Delivery</span>
+            </a></li>
+
+            <li><a href="./.html" class="footer-nav-link">
+              <span>Orders & Returns</span>
+              <span>Orders & Returns</span>
+            </a></li>
+
+            <li><a href="./.html" class="footer-nav-link">
+              <span>Terms & Conditions</span>
+              <span>Terms & Conditions</span>
+            </a></li>
+          </ul>
+        </li>
+
+      </ul>
+    </div>
+
+  </footer>
+
+  <script type="module" src="/JS/checkout.js"></script>
 
 </body>
 
