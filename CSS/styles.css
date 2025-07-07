@@ -333,6 +333,111 @@ li {list-style: none;}
 
 
 
+/* 
+  //
+  ***  MAIN  ***
+  __________
+*/
+
+.product-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.product-card {
+  position: relative;
+  background-color: var(--d_beige);
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.pdt-img {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 100%;
+
+  & img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+.add-to-cart {
+  position: absolute;
+  right: 16px;
+  bottom: 64px;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 3.84rem;
+  text-transform: capitalize;
+  width: 166.4px;
+  background-color: var(--beige);
+  border: 1px solid var(--black-50);
+  transition: .25s ease;
+}
+
+.add-to-cart span {
+  display: grid;
+  place-items: center;
+  transition: .25s ease;
+}
+
+.product-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+}
+
+.product-info h4 {
+  font-family: var(--sentient);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.6rem;
+}
+
+
+
+@media screen and (min-width: 810px) {
+
+  .add-to-cart {
+    opacity: 0;
+    visibility: hidden;
+    transition: .25s ease;
+  }
+  
+  .add-to-cart:hover {
+    border-color: var(--black);
+
+    & span {
+      transform: rotate(90deg);
+    }
+  }
+
+  .product-card:hover .add-to-cart {opacity: 1; visibility: visible;}
+
+  .product-grid {grid-template-columns: repeat(3, 1fr);}
+}
+
+
+@media screen and (min-width: 1200px) {
+  .product-grid {grid-template-columns: repeat(4, 1fr);}
+
+}
+
+
 
 /* 
   //
@@ -343,6 +448,7 @@ li {list-style: none;}
   background-color: var(--black);
   padding: 64px 16px 42px;
   display: grid;
+  gap: 64px;
   grid-template-columns: 1fr;
   color: var(--white);
   text-align: center;
@@ -394,7 +500,7 @@ li {list-style: none;}
 
 .payement a svg {
   fill: var(--white);
-  height: 32px;
+  height: 44px;
   width: fit-content;
 }
 

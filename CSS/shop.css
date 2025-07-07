@@ -10,13 +10,24 @@ ______________________________*/
 */
 :root {
   /* colors */
+  --black:    #1a1c18;
+  --black-50: #1a1c1899;
+  --green:    #3c4433;
+  --white:    #fff;
+  --beige:    #f2f2ef;
+  --white-50: #ffffff99;
+  --d_beige:  #e8e8e1;
+
   /* font & typography */
+  --inter: 'Inter', sans-serif;
+  --geist: 'Geist', sans-serif;
+  --sentient: 'Sentient', serif;
 }
 
 
 
 /* 
   //
-  ***  SECTION  ***
+  ***  RESET  ***
   __________
 */

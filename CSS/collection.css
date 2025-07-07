@@ -1,0 +1,122 @@
+/* ---  STYLES CSS  --- 
+  ****
+  ****
+______________________________*/
+
+/* 
+  //
+  ***  VARIABLES  ***
+  __________
+*/
+:root {
+  /* colors */
+  --black:    #1a1c18;
+  --black-50: #1a1c1899;
+  --green:    #3c4433;
+  --white:    #fff;
+  --beige:    #f2f2ef;
+  --white-50: #ffffff99;
+  --d_beige:  #e8e8e1;
+
+  /* font & typography */
+  --inter: 'Inter', sans-serif;
+  --geist: 'Geist', sans-serif;
+  --sentient: 'Sentient', serif;
+}
+
+/* 
+  //
+  ***  HERO SECTION  ***
+  __________
+*/
+.collection-hero {
+  position: relative;
+  margin-top: 72px;
+}
+
+.img-container {
+  height: 50vh;
+  width: 100%;
+  overflow: hidden;
+
+  & img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+.collection-article {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  max-width: 450px;
+  padding: 32px 16px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.collection-article h1 {
+  font-family: var(--sentient);
+  font-size: 4rem;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--white);
+}
+
+.collection-article p {
+  font-size: 1.6rem;
+  color: var(--white-50);
+}
+
+
+/* 
+  //
+  ***  GRID SECTION  ***
+  __________
+*/
+.product-grid-section {
+  padding: 120px 16px 60px;
+}
+
+@media screen and (min-width: 810px) {
+  .collection-article {
+    padding: 64px 32px;
+    max-width: 500px;
+  }
+
+  .collection-article h1 {
+    font-size: 5.6rem;
+  }
+
+  .collection-article p {
+    font-size: 1.8rem;
+  }
+
+  .img-container {
+    height: calc(70vh - 72px);
+  }
+
+  .product-grid-section {
+    padding: 120px 32px 60px;
+  }
+}
+
+
+@media screen and (min-width: 1200px) {
+
+  .collection-article h1 {
+    font-size: 6.4rem;
+    max-width: 600px;
+  }
+
+  .collection-article p {
+    font-size: 2rem;
+  }
+
+  .img-container {
+    height: calc(90vh - 72px);
+  }
+}
