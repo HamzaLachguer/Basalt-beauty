@@ -2,6 +2,7 @@
 import {initNavigation} from './header.js';
 import {sliderData, categoryList, productList} from '../data.js';
 import {priceFormat} from './JS/utils.js';
+import {cart} from './cart.js';
 
 
 /* 
@@ -134,10 +135,13 @@ function renderCategoryFilter() {
     return `<button class="" data-category=${id}>${title}</button>`;
   }).join("");
 
-  const filteredList = filterProducts("Cleansers");
+  const filteredList = filterProducts(DEFAULT_CATEGORY);
 
   if (!filterProducts || !filterProducts.length) return;
-  generatePdtGrid(filteredList, );
+  generatePdtGrid(filteredList);
+
+  // product click
+  hundlePdtClick()
 
   // Event delegation
   categoryListContainer.addEventListener('click', handleCategoryClick)
@@ -158,6 +162,9 @@ function handleCategoryClick(e) {
 
   if (!filteredList || !filteredList.length) return;
   generatePdtGrid(filteredList, MAX_PRODUCTS_DISPLAY);
+
+  // product click
+  hundlePdtClick()
 }
 
 // Generate product grid - categories
@@ -198,6 +205,37 @@ function generatePdtGrid(list, maxProducts = MAX_PRODUCTS_DISPLAY) {
 // filter products by category
 function filterProducts(category) {
   return productList.filter(p => category === p.category)
+}
+
+// hundle product click
+function hundlePdtClick() {
+  const productCards = [...productGrid.querySelectorAll(".product-card")];
+
+  productCards.forEach(card => {
+    card.addEventListener('click', e => {
+      if (!card) return;
+
+      const productId = e.target.closest(".product-card").dataset.pdtId;
+      const product = productList.find(p => p.id === productId);
+      const size = product.sizeList[0];
+      // add to cart logic
+      if (e.target.closest(".add-to-cart")) {
+        const pdtInCart = cart.find(item => item.id === productId && item.size === size);
+
+        if (!pdtInCart) {
+          cart.push({
+            id: productId,
+            quantity: 1,
+            size: size
+          })
+        } else {pdtInCart.quantity +=1}
+        localStorage.setItem('cart', JSON.stringify(cart));
+        console.log(cart)
+      }
+
+      // go to product page 
+    })
+  })
 }
 
 // Start product grid when the DOM is ready
